@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site', // Title for your website.
-  tagline: 'A website for testing',
+  title: 'Architecture Center', // Title for your website.
+  tagline: "Technical documentations for DevOp's Team",
   url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -37,11 +37,13 @@ const siteConfig = {
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [
+  headerLinks: [  
     {doc: 'doc1', label: 'Docs'},
     {doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
+    {search: true},
+    { languages: true },
   ],
 
   // If you have users set above, you add it here:
@@ -73,7 +75,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Grupo Financiero Banregio`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -93,14 +95,26 @@ const siteConfig = {
   twitterImage: 'img/undraw_tweetstorm.svg',
 
   // Show documentation's last contributor's name.
-  // enableUpdateBy: true,
+  enableUpdateBy: true,
 
   // Show documentation's last update time.
-  // enableUpdateTime: true,
+  enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
+
+
+  algolia: {
+    apiKey: '9b1f362571b8ce24b643f9577c650ec6',
+    indexName: 'website-docs-template',
+    algoliaOptions: {
+      placeholder: "Ask me something",
+      facetFilters: [ "language:ENGLISH", "version:1.0"]
+    } // Optional, if provided by Algolia
+  },
+
+
 };
 
 module.exports = siteConfig;

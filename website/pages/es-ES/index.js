@@ -80,7 +80,7 @@ class HomeSplash extends React.Component {
 
 class Index extends React.Component {
   render() {
-    const {config: siteConfig, language = 'en'} = this.props;
+    const {config: siteConfig, language = 'es-ES'} = this.props;
     const {baseUrl} = siteConfig;
 
     const Block = props => (
@@ -100,8 +100,8 @@ class Index extends React.Component {
       <div
         className="productShowcaseSection paddingBottom"
         style={{textAlign: 'center'}}>
-        <h2>Next Platform</h2>
-        <MarkdownBlock>We're changing the financial services in México</MarkdownBlock>
+        <h2>Llamada de la característica</h2>
+        <MarkdownBlock>These are features of this project</MarkdownBlock>
       </div>
     );
 
@@ -185,7 +185,7 @@ class Index extends React.Component {
       return (
         <div className="productShowcaseSection paddingBottom">
           <h2>Who is Using This?</h2>
-          <p>This has created for Software engineers, developers, architects and nerds.</p>
+          <p>This project is used by all these people</p>
           <div className="logos">{showcase}</div>
           <div className="more-users">
             <a className="button" href={pageUrl('users.html')}>
@@ -213,7 +213,6 @@ class Index extends React.Component {
 }
 
 Index.defaultProps = {
-  language: 'en',
+  language: 'es-ES',
 };
-
 module.exports = Index;
